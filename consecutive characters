@@ -1,0 +1,6 @@
+from itertools import groupby
+
+S = input()
+
+for key, group in groupby(S):
+    print(f"({len(list(group))}, {key})", end=" ")
