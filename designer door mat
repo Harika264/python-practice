@@ -1,0 +1,16 @@
+n, m = map(int, input().split())
+
+# Pattern character
+pattern = ".|."
+
+# Top Half
+for i in range(1, n, 2):
+    # i represents the number of times the pattern repeats
+    print((pattern * i).center(m, '-'))
+
+# Middle Row
+print("WELCOME".center(m, '-'))
+
+# Bottom Half
+for i in range(n-2, -1, -2):
+    print((pattern * i).center(m, '-'))
