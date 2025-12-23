@@ -1,0 +1,27 @@
+thickness = int(input()) # This must be an odd number
+c = 'H'
+
+# Top Cone
+# The cone builds outward from the center.
+for i in range(thickness):
+    print((c*i).rjust(thickness-1) + c + (c*i).ljust(thickness-1))
+
+# Top Pillars
+# Two pillars centered within a specific width.
+for i in range(thickness+1):
+    print((c*thickness).center(thickness*2) + (c*thickness).center(thickness*6))
+
+# Middle Belt
+# A solid block centered to connect the pillars.
+for i in range((thickness+1)//2):
+    print((c*thickness*5).center(thickness*6))    
+
+# Bottom Pillars
+# Same as top pillars, using center to keep them aligned.
+for i in range(thickness+1):
+    print((c*thickness).center(thickness*2) + (c*thickness).center(thickness*6))    
+
+# Bottom Cone
+# The cone tapers inward, shifted all the way to the right.
+for i in range(thickness):
+    print(((c*(thickness-i-1)).rjust(thickness) + c + (c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6))
