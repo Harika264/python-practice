@@ -1,0 +1,13 @@
+# Read inputs
+m = int(input())
+set a = set(map(int, input().split()))
+
+n = int(input())
+set b = set(map(int, input().split()))
+
+# Symmetric difference
+sym_diff = set a.symmetric_difference(set b)
+
+# Output in ascending order
+for value in sorted(sym_diff):
+    print(value)
