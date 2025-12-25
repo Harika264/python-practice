@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Number of English newspaper subscribers
+n = int(input())
+english = set(map(int, input().split()))
+
+# Number of French newspaper subscribers
+m = int(input())
+french = set(map(int, input().split()))
+
+# Students with at least one subscription
+total_students = english | french
+
+# Output result
+print(len(total_students))
