@@ -1,0 +1,4 @@
+n = int(input())
+cols = input().split()
+marks_index = cols.index("MARKS")
+print(f"{sum(int(input().split()[marks_index]) for _ in range(n)) / n:.2f}")
