@@ -1,0 +1,9 @@
+import cmath
+# Read the complex number
+z = complex(input().strip())
+# Calculate modulus and phase
+modulus = abs(z)
+phase = cmath.phase(z)
+# Print results
+print(modulus)
+print(phase)
