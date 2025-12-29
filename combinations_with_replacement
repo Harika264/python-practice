@@ -1,0 +1,7 @@
+n = int(input())
+A = set(map(int, input().split()))
+for _ in range(int(input())):
+    operation, _ = input().split()
+    B = set(map(int, input().split()))
+    getattr(A, operation)(B)
+print(sum(A))
