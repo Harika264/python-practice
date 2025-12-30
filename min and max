@@ -1,0 +1,8 @@
+import numpy as np
+# Read dimensions
+n, m = map(int, input().split())
+# Read array
+arr = np.array([list(map(int, input().split())) for _ in range(n)])
+# Min along axis 1, then max
+result = np.max(np.min(arr, axis=1))
+print(result)
