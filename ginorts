@@ -1,0 +1,8 @@
+s = input()
+
+print(
+    ''.join(sorted([c for c in s if c.islower()]) +
+            sorted([c for c in s if c.isupper()]) +
+            sorted([c for c in s if c.isdigit() and int(c) % 2 == 1]) +
+            sorted([c for c in s if c.isdigit() and int(c) % 2 == 0]))
+)
