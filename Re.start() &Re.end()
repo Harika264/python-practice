@@ -1,0 +1,9 @@
+import re
+s = input()
+k = input()
+matches = list(re.finditer(r'(?={})'.format(k), s))
+if matches:
+    for match in matches:
+        print((match.start(), match.start() + len(k) - 1))
+else:
+    print((-1, -1))
