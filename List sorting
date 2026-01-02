@@ -1,0 +1,4 @@
+names = ["Harika", "Anil", "Ravi", "Sita"]
+
+names.sort()
+print(names)
