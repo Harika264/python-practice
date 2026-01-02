@@ -1,0 +1,13 @@
+from collections import Counter
+
+s = input().strip()
+
+# Count frequency of each character
+counter = Counter(s)
+
+# Sort by frequency (descending) and character (alphabetical)
+sorted_chars = sorted(counter.items(), key=lambda x: (-x[1], x[0]))
+
+# Print top 3
+for char, count in sorted_chars[:3]:
+    print(char, count)
