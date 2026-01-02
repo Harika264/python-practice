@@ -1,0 +1,16 @@
+import re
+
+n = int(input())
+pattern = re.compile(r'#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})')
+
+for _ in range(n):
+    line = input()
+    
+    # Ignore selectors (lines starting with #)
+    if line.strip().startswith('#'):
+        continue
+    
+    # Find and print valid hex color codes
+    matches = pattern.findall(line)
+    for color in matches:
+        print(color)
